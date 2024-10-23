@@ -1,3 +1,5 @@
+# Michael Ostrowski
+
 def encode(password: str):
     # initialize an empty string to store the password
     encoded_password = ""
