@@ -11,8 +11,17 @@ def encode(password: str):
 
     return encoded_password
 
+
+# Nicholas Chaves
+
 def decode(encoded_password: str):
-    pass
+    decoded_password=''
+    for i in encoded_password:
+        decoded_digit=int(i)-3
+        if decoded_digit<0:
+            decoded_digit+=10
+        decoded_password+=str(decoded_digit)
+    return decoded_password
 
 def main():
     # initialize variables
@@ -35,7 +44,7 @@ def main():
             print('Your password has been encoded and stored!')
 
         elif option == 2:
-            pass
+            decoded_password=decode(encoded_password)
             print(f'The encoded password is {encoded_password}, and the original password is {decoded_password}')
 
         elif option == 3:
